@@ -27,7 +27,7 @@ public class Menu {
         try {
             return Integer.parseInt(in.readLine());
         } catch (NumberFormatException | IOException e) {
-            System.out.println("\nPlease enter a number between 1 et 7\n");
+            System.out.println("\nPlease enter a number between 1 et 3\n");
             e.printStackTrace();
         }
         return 0;
@@ -37,9 +37,10 @@ public class Menu {
             case 1:
                 return "choice 1";
             case 2:
-                break;
+                return "choice 2";
+            default:
+                return "";
         }
-        return "";
     }
 }
 

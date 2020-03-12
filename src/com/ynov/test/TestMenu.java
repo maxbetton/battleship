@@ -9,7 +9,11 @@ public class TestMenu {
 
     @Test
     public void shouldMenuChoice1CorrectlyDisplayed() {
-
         Assert.assertEquals("choice 1", menu.menuChoiceSelected(1));
+    }
+
+    @Test
+    public void shouldMenuChoice2CorrectlyDisplayed() {
+        Assert.assertEquals("choice 2", menu.menuChoiceSelected(2));
     }
 }
