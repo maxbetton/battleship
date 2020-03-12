@@ -1,19 +1,29 @@
 package com.ynov.main;
 
+import java.io.BufferedReader;
 import java.io.IOException;
+import java.io.InputStreamReader;
 
 public class Game {
     static String[][]  grid = new String[11][11];
     static String[][] gridIA = new String[11][11];
     static String[][] hiddenGrid = new String[11][11];
     static String you = "";
+    static int line = 0;
+    static int column = 0;
+    static int coordinate = 0;
+    static int counter = 1;
+    static int touch = 0;
+    static int touchA = 0;
 
-    public Game(){
+    public Game() throws IOException {
         initGrids();
 
         initIAGrid();
 
         initPlayerGrid();
+
+        play();
     }
     public static void main(String [] args) {
 //        initGrids();
@@ -32,12 +42,8 @@ public class Game {
     public static String initGrids() {
 
         String ia = "";
-        int line = 0;
-        int column = 0;
-        int coordinate = 0;
-        int counter = 1;
-        int touch = 0;
-        int touchA = 0;
+
+
         boolean error;
 
         //create 2 grids
@@ -65,8 +71,16 @@ public class Game {
         return printTwoGrids(grid, hiddenGrid);
     }
 
-    public String[][] getGrid(){
+    public static String[][] getGrid(){
         return grid;
+    }
+
+    public String[][] getGridIA(){
+        return gridIA;
+    }
+
+    public static String[][] getHiddenGrid(){
+        return hiddenGrid;
     }
 
     public static String initIAGrid() {
@@ -308,5 +322,128 @@ public class Game {
         System.out.println() ;
         return res.toString();
     }
+
+    public void play() throws IOException {
+        //Boucle qui répète tant que tout les bâteaux du joueur 1 ou du joueur 2 sont
+        //coulés
+        do
+        {
+            //Affiche un titre
+            System.out.println("   " + you.toUpperCase() + "              " + "l'ordi" + "\n") ;
+
+            //Affiche les deux grilles de jeu
+            printTwoGrids(grid, hiddenGrid) ;
+
+            //Compteur mod 2 pour que les joueurs jouent chacun à leur tour.
+            if (counter % 2 == 1)
+            {
+                do
+                {
+                    //Appelle la fonction d'entrée de coordonnée pour la ligne du joueur
+                    line = line(line) ;
+                    //Puis de la colonne
+                    column = column(column) ;
+                }
+                while (hiddenGrid[line][column] == " " || hiddenGrid[line][column] == "X") ;
+
+                touchOrSunkPlayer(gridIA, hiddenGrid, line, column);
+
+            }
+            else
+            {
+                do
+                {
+                    //Appelle la fonction d'entrée de coordonnée pour la ligne de l'ordi
+                    line = (int)(Math.random() * (10) + 1) ;
+                    //Puis la colonne
+                    column = (int)(Math.random() * (10) + 1) ;
+                }
+                while(grid[line][column] == " " || grid[line][column] == "X") ;
+
+            }
+        }
+        while(touch != 17 && touchA != 17) ;
+
+        //Vous dis si vous avez perdu ou gagner
+        if (touchA == 17)
+        {
+            printTwoGrids(grid, hiddenGrid) ;
+            System.out.println("\n" + you + " : you loose\n") ;
+        }
+        else
+        {
+            printTwoGrids(grid, hiddenGrid) ;
+            System.out.println("\n" + you + " : you win\n") ;
+        }
+
+    }
+
+
+    public static String touchOrSunkPlayer(String[][] gridIA, String[][] hiddenGrid, int line, int column){
+
+        return "";
+    }
+
+    public int line(int a) throws IOException // ligne de départ
+    {
+        BufferedReader in = new BufferedReader(new InputStreamReader(System.in)) ;
+
+        boolean erreur = false ;
+
+        do
+        {
+            erreur = false ;
+
+            try
+            {
+                do
+                {
+                    System.out.println("\nEntrez la ligne de depart") ;
+                    a = Integer.parseInt(in.readLine()) ;
+                }
+                while (a < 1 || a > 10) ;
+            }
+            catch (NumberFormatException e)
+            {
+                System.out.println("Veuillez entrer un entier entre 1 et 10\n");
+                erreur = true ;
+            }
+        }
+        while(erreur != false) ;
+
+        return a ;
+    }
+
+    public int column(int a) throws IOException // colonne de départ
+    {
+        BufferedReader in = new BufferedReader(new InputStreamReader(System.in)) ;
+
+        boolean erreur = false ;
+
+        do
+        {
+            erreur = false ;
+
+            try
+            {
+                do
+                {
+                    System.out.println("\nEntrez la colonne de depart") ;
+                    a = Integer.parseInt(in.readLine()) ;
+                }
+                while (a < 1 || a > 10) ;
+            }
+            catch (NumberFormatException e)
+            {
+                System.out.println("Veuillez entrer un entier entre 1 et 10\n");
+                erreur = true ;
+            }
+        }
+        while(erreur != false) ;
+
+        return a ;
+    }
+
+
 
 }

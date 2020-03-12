@@ -6,7 +6,7 @@ import java.io.InputStreamReader;
 
 public class Menu {
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException {
         BufferedReader in = new BufferedReader(new InputStreamReader(System.in));
         int menu = 0;
 
@@ -32,7 +32,7 @@ public class Menu {
         }
         return 0;
     }
-    public static String menuChoiceSelected(int menu){
+    public static String menuChoiceSelected(int menu) throws IOException {
         switch (menu) {
             case 1:
                 Game game = new Game();
