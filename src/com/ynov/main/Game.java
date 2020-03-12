@@ -51,67 +51,66 @@ public class Game {
         return printTwoGrids(grid, hiddenGrid);
     }
     public static String printTwoGrids(String[][] a, String[][] b) {
-        String res = "";
+        StringBuilder res = new StringBuilder();
         for (int i = 0 ; i < 11 ; i++)
         {
             for (int j = 0 ; j < 11 ; j++)
             {
                 if (j == 0 && i == 0){
                     System.out.print("   ") ;
-                    res += "   ";
+                    res.append("   ");
                 }
                 else
                 {
                     if (j == 0 && i == 10) {
                         System.out.print(a[i][j] + " ");
-                        res += a[i][j] + " ";
+                        res.append(a[i][j]).append(" ");
                     }
                     else
                     {
                         if(j == 0) {
                             System.out.print(a[i][j] + "  ");
-                            res += a[i][j] + "  ";
+                            res.append(a[i][j]).append("  ");
                         }
                         else {
                             System.out.print(a[i][j]);
-                            res += a[i][j];
+                            res.append(a[i][j]);
                         }
                     }
                 }
             }
 
             System.out.print("         ") ;
-            res += "         ";
+            res.append("         ");
             for (int k = 0 ; k < 11 ; k++)
             {
                 if (i == 0 && k == 0) {
                     System.out.print("  ");
-                    res += "  ";
+                    res.append("  ");
                 }
                 else
                 {
                     if (k == 0 && i == 10) {
                         System.out.print(b[i][k] + " ");
-                        res += b[i][k] + " ";
+                        res.append(b[i][k]).append(" ");
                     }
                     else
                     {
                         if(k == 0) {
                             System.out.print(b[i][k] + "  ");
-                            res += b[i][k] + "  ";
+                            res.append(b[i][k]).append("  ");
                         }
                         else {
                             System.out.print(b[i][k]);
-                            res += b[i][k];
+                            res.append(b[i][k]);
                         }
                     }
                 }
             }
             System.out.println();
-            res += "\n";
+            res.append("\n");
         }
         System.out.println() ;
-        //res += "\n";
-        return res;
+        return res.toString();
     }
 }

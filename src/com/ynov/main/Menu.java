@@ -36,6 +36,7 @@ public class Menu {
         switch (menu) {
             case 1:
                 Game game = new Game();
+                return game.choice1();
             case 2:
                 Rules rules = new Rules();
                 return rules.choice2();
