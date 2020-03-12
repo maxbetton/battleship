@@ -381,7 +381,13 @@ public class Game {
 
     public static String touchOrSunkPlayer(String[][] gridIA, String[][] hiddenGrid, int line, int column){
         //Touché ou à côté, suivant le cas
-         if (gridIA[line][column] == "\04")
+        if (gridIA[line][column] == "*")
+        {
+            hiddenGrid[line][column] = " " ;
+            System.out.println("you sunk");
+            return "you sunk";
+        }
+        else if (gridIA[line][column] == "\04")
         {
             hiddenGrid[line][column] = "X" ;
             touchA = touchA + 1 ;
