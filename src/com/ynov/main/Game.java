@@ -381,7 +381,7 @@ public class Game {
 
     public static String touchOrSunkPlayer(String[][] gridIA, String[][] hiddenGrid, int line, int column){
 
-        return "";
+        return "you touch";
     }
 
     public int line(int a) throws IOException // ligne de départ
