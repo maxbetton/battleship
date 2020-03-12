@@ -35,6 +35,7 @@ public class Menu {
     public static String menuChoiceSelected(int menu){
         switch (menu) {
             case 1:
+                Game game = new Game();
                 return "choice 1";
             case 2:
                 return "choice 2";
