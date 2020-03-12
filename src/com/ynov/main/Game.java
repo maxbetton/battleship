@@ -360,6 +360,8 @@ public class Game {
                 }
                 while(grid[line][column] == " " || grid[line][column] == "X") ;
 
+                touchOrSunkIA(grid, line, column);
+
             }
         }
         while(touch != 17 && touchA != 17) ;
@@ -398,6 +400,22 @@ public class Game {
         return "";
     }
 
+    public void touchOrSunkIA(String[][] grid, int line, int column){
+        //Touché ou à côté, suivant le cas
+        if (grid[line][column] == "*")
+        {
+            grid[line][column] = " " ;
+            System.out.println("IA sunk");
+        }
+        else if (grid[line][column] == "\04")
+        {
+            grid[line][column] = "X" ;
+            touch = touch + 1 ;
+            System.out.println("IA touch");
+        }
+        counter = counter + 1 ;
+
+    }
 
     public int line(int a) throws IOException // ligne de départ
     {
