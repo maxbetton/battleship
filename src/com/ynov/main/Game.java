@@ -136,16 +136,15 @@ public class Game {
         //coordinates for the 2 boxes boat
         iaBoats(gridIA, 2) ;
 
-        firstPrint(gridIA);
     }
 
-    public static void iaBoats(String grid [][], int nbre)
+    public static void iaBoats(String[][] grid, int number)
     {
-        int error = 0 ;
+        int error;
 
         do
         {
-            int i = 0 ;
+            int i;
             int coordinate = (int)(Math.random() * (2) + 1) ;
             int line = (int)(Math.random() * (10) + 1) ;
             int colomn = (int)(Math.random() * (10) + 1) ;
@@ -156,7 +155,7 @@ public class Game {
             {
                 case 1 :
                 {
-                    if((colomn + nbre) > 11)
+                    if((colomn + number) > 11)
                     {
                         error = 0 ;
                     }
@@ -166,33 +165,33 @@ public class Game {
                         {
                             i = colomn ;
 
-                            for (int j = colomn ; j < (colomn + nbre) ; j++)
+                            for (int j = colomn ; j < (colomn + number) ; j++)
                             {
-                                if(grid[line][j] == "\04")
+                                if(grid[line][j].equals("\04"))
                                 {
                                     error = 0 ;
-                                    i = colomn + nbre ;
+                                    i = colomn + number ;
                                 }
                             }
 
                             if (error != 0)
                             {
-                                for (int j = colomn ; j < (colomn + nbre) ; j++)
+                                for (int j = colomn ; j < (colomn + number) ; j++)
                                 {
                                     grid[line][j] = "\04" ;
 
                                 }
-                                i = colomn + nbre ;
+                                i = colomn + number ;
                             }
                         }
-                        while(i < colomn + nbre );
+                        while(i < colomn + number );
                     }
                 }
                 break ;
 
                 case 2 :
                 {
-                    if((line + nbre) > 11)
+                    if((line + number) > 11)
                     {
                         error = 0 ;
                     }
@@ -202,26 +201,26 @@ public class Game {
                         {
                             i = line ;
 
-                            for (int j = line ; j < (line + nbre) ; j++)
+                            for (int j = line ; j < (line + number) ; j++)
                             {
-                                if(grid[j][colomn] == "\04")
+                                if(grid[j][colomn].equals("\04"))
                                 {
                                     error = 0 ;
-                                    i = line + nbre ;
+                                    i = line + number ;
                                 }
                             }
 
                             if (error != 0)
                             {
-                                for (int j = line ; j < (line + nbre) ; j++)
+                                for (int j = line ; j < (line + number) ; j++)
                                 {
                                     grid[j][colomn] = "\04" ;
 
                                 }
-                                i = line + nbre ;
+                                i = line + number ;
                             }
                         }
-                        while(i < line + nbre );
+                        while(i < line + number );
                     }
                 }
                 break ;
@@ -232,7 +231,7 @@ public class Game {
 
     public static String firstPrint(String[][] a) // Affiche la grille quand vosu placez les bateaux
     {
-        String res = "";
+        StringBuilder res = new StringBuilder();
         for (int i = 0 ; i < 11 ; i++)
         {
             for (int j = 0 ; j < 11 ; j++)
@@ -240,30 +239,30 @@ public class Game {
                 if (j == 0 && i == 0)
                 {
                     System.out.print("   ") ;
-                    res += "   ";
+                    res.append("   ");
                 }
                 else if(j == 0 && i == 10)
                 {
                     System.out.print(a[i][j] + " ") ;
-                    res += a[i][j] + " ";
+                    res.append(a[i][j]).append(" ");
                 }
                 else if(j == 0 && i > 0)
                 {
                     System.out.print(a[i][j] + "  ") ;
-                    res += a[i][j] + "  ";
+                    res.append(a[i][j]).append("  ");
                 }
                 else
                 {
                     System.out.print(a[i][j]) ;
-                    res += a[i][j];
+                    res.append(a[i][j]);
                 }
             }
 
             System.out.println() ;
-            res += "\n";
+            res.append("\n");
         }
 
         System.out.println() ;
-        return res;
+        return res.toString();
     }
 }
