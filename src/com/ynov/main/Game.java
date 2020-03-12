@@ -167,7 +167,7 @@ public class Game {
     }
 
 
-    public static void placeBoat(String[][] grid, int number)
+    public static int placeBoat(String[][] grid, int number)
     {
         int error;
 
@@ -256,6 +256,7 @@ public class Game {
             }
         }
         while(error != 1) ;
+        return error;
     }
 
     public static String firstPrint(String[][] a) // Affiche la grille quand vous placez les bateaux

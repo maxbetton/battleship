@@ -46,7 +46,9 @@ public class TestGame {
 
     @Test
     public void shouldPlaceA5CasePlayerBoat() throws IOException {
-
+        game.initGrids();
+        String[][] grid = game.getGrid();
+        Assert.assertEquals(1, game.placeBoat(grid, 5));
     }
 
 }
