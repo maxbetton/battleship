@@ -111,4 +111,25 @@ public class TestGame {
         Game.firstPrint(myGrid);
         Assert.assertEquals("you touch", Game.touchOrSunkPlayer(myGrid, hiddenGrid, 0, 0));
     }
+
+    @Test
+    public void shouldPlayerSunk() {
+        Game.initGrids();
+        String[][] hiddenGrid = Game.getHiddenGrid();
+        String[][] myGrid = new String[100][100];
+        for (int i = 0; i < 11; i++) {
+            for (int j = 0; j < 11; j++) {
+                myGrid[i][j] = "*";
+            }
+        }
+        //Then numbers
+        for (int i = 0; i < 11; i++) {
+            myGrid[i][0] = i + "";
+            myGrid[0][i] = i + "";
+        }
+
+        myGrid[0][0] = "*";
+        Game.firstPrint(myGrid);
+        Assert.assertEquals("you sunk", Game.touchOrSunkPlayer(myGrid, hiddenGrid, 0, 0));
+    }
 }
