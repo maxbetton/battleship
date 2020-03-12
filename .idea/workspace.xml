@@ -2,9 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cfb81aeb-646b-412f-8908-4e1b6903bac4" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/com/ynov/main/Game.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/battleship/com/ynov/main/Game.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/battleship/com/ynov/main/Game.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/battleship/com/ynov/main/Menu.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/battleship/com/ynov/main/Menu.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/ynov/main/Game.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/ynov/main/Game.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/ynov/main/Menu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/ynov/main/Menu.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -49,7 +50,20 @@
       <recent name="E:\Documents\battleship\src\com\ynov\main" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.TestMenu">
+  <component name="RunManager" selected="JUnit.TestGame">
+    <configuration name="Game" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.ynov.main.Game" />
+      <module name="battleship" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.ynov.main.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="Menu (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.ynov.main.Menu" />
       <module name="battleship" />
@@ -66,6 +80,21 @@
     <configuration name="Menu" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Menu" />
       <module name="battleship" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TestGame" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="battleship" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.ynov.test.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.ynov.test" />
+      <option name="MAIN_CLASS_NAME" value="com.ynov.test.TestGame" />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -87,6 +116,8 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.TestGame" />
+        <item itemvalue="Application.Game" />
         <item itemvalue="JUnit.TestMenu" />
         <item itemvalue="Application.Menu (1)" />
         <item itemvalue="Application.Menu" />
@@ -103,7 +134,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1584003330083</updated>
-      <workItem from="1584003336303" duration="3465000" />
+      <workItem from="1584003336303" duration="5377000" />
     </task>
     <servers />
   </component>
@@ -115,6 +146,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="552" y="179" key="#Project_Structure/0.0.1920.1040@0.0.1920.1040" timestamp="1584003347010" />
+    <state x="92" y="92" width="1736" height="856" key="#com.intellij.execution.junit2.states.ComparisonFailureState$DiffDialog" timestamp="1584009063691">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="92" y="92" width="1736" height="856" key="#com.intellij.execution.junit2.states.ComparisonFailureState$DiffDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1584009063691" />
     <state x="765" y="230" key="#com.intellij.ide.util.MemberChooser" timestamp="1584006999473">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -123,22 +158,38 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="690" y="268" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1584003492643" />
-    <state width="1877" height="267" key="GridCell.Tab.0.bottom" timestamp="1584007231406">
+    <state width="1877" height="218" key="GridCell.Tab.0.bottom" timestamp="1584009065171">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="267" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1584007231406" />
-    <state width="1877" height="267" key="GridCell.Tab.0.center" timestamp="1584007231406">
+    <state width="1877" height="218" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1584009065171" />
+    <state width="1877" height="218" key="GridCell.Tab.0.center" timestamp="1584009065171">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="267" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1584007231406" />
-    <state width="1877" height="267" key="GridCell.Tab.0.left" timestamp="1584007231406">
+    <state width="1877" height="218" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1584009065171" />
+    <state width="1877" height="218" key="GridCell.Tab.0.left" timestamp="1584009065171">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="267" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1584007231406" />
-    <state width="1877" height="267" key="GridCell.Tab.0.right" timestamp="1584007231406">
+    <state width="1877" height="218" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1584009065171" />
+    <state width="1877" height="218" key="GridCell.Tab.0.right" timestamp="1584009065171">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="267" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1584007231406" />
+    <state width="1877" height="218" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1584009065171" />
+    <state width="1877" height="348" key="GridCell.Tab.1.bottom" timestamp="1584009006673">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="348" key="GridCell.Tab.1.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1584009006673" />
+    <state width="1877" height="348" key="GridCell.Tab.1.center" timestamp="1584009006673">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="348" key="GridCell.Tab.1.center/0.0.1920.1040@0.0.1920.1040" timestamp="1584009006673" />
+    <state width="1877" height="348" key="GridCell.Tab.1.left" timestamp="1584009006673">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="348" key="GridCell.Tab.1.left/0.0.1920.1040@0.0.1920.1040" timestamp="1584009006673" />
+    <state width="1877" height="348" key="GridCell.Tab.1.right" timestamp="1584009006673">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="348" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1584009006673" />
     <state x="664" y="414" key="com.intellij.jarRepository.RepositoryAttachDialog-DOWNLOAD" timestamp="1584004013092">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>

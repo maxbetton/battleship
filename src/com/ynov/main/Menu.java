@@ -36,10 +36,9 @@ public class Menu {
         switch (menu) {
             case 1:
                 Game game = new Game();
-                return "choice 1";
             case 2:
                 Rules rules = new Rules();
-                return "choice 2";
+                return rules.choice2();
             case 3:
                 return "quit game";
             default:
