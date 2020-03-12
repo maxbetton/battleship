@@ -171,91 +171,97 @@ public class Game {
     {
         int error;
 
-        do
-        {
-            int i;
-            int coordinate = (int)(Math.random() * (2) + 1) ;
-            int line = (int)(Math.random() * (10) + 1) ;
-            int colomn = (int)(Math.random() * (10) + 1) ;
+        if (number > 5)
+            error = 0;
+        else {
 
-            error = 1 ;
 
-            switch (coordinate)
+            do
             {
-                case 1 :
-                {
-                    if((colomn + number) > 11)
-                    {
-                        error = 0 ;
-                    }
-                    else
-                    {
-                        do
-                        {
-                            i = colomn ;
+                int i;
+                int coordinate = (int)(Math.random() * (2) + 1) ;
+                int line = (int)(Math.random() * (10) + 1) ;
+                int colomn = (int)(Math.random() * (10) + 1) ;
 
-                            for (int j = colomn ; j < (colomn + number) ; j++)
+                error = 1 ;
+
+                switch (coordinate)
+                {
+                    case 1 :
+                    {
+                        if((colomn + number) > 11)
+                        {
+                            error = 0 ;
+                        }
+                        else
+                        {
+                            do
                             {
-                                if(grid[line][j].equals("\04"))
+                                i = colomn ;
+
+                                for (int j = colomn ; j < (colomn + number) ; j++)
                                 {
-                                    error = 0 ;
+                                    if(grid[line][j].equals("\04"))
+                                    {
+                                        error = 0 ;
+                                        i = colomn + number ;
+                                    }
+                                }
+
+                                if (error != 0)
+                                {
+                                    for (int j = colomn ; j < (colomn + number) ; j++)
+                                    {
+                                        grid[line][j] = "\04" ;
+
+                                    }
                                     i = colomn + number ;
                                 }
                             }
-
-                            if (error != 0)
-                            {
-                                for (int j = colomn ; j < (colomn + number) ; j++)
-                                {
-                                    grid[line][j] = "\04" ;
-
-                                }
-                                i = colomn + number ;
-                            }
+                            while(i < colomn + number );
                         }
-                        while(i < colomn + number );
                     }
-                }
-                break ;
+                    break ;
 
-                case 2 :
-                {
-                    if((line + number) > 11)
+                    case 2 :
                     {
-                        error = 0 ;
-                    }
-                    else
-                    {
-                        do
+                        if((line + number) > 11)
                         {
-                            i = line ;
-
-                            for (int j = line ; j < (line + number) ; j++)
+                            error = 0 ;
+                        }
+                        else
+                        {
+                            do
                             {
-                                if(grid[j][colomn].equals("\04"))
+                                i = line ;
+
+                                for (int j = line ; j < (line + number) ; j++)
                                 {
-                                    error = 0 ;
+                                    if(grid[j][colomn].equals("\04"))
+                                    {
+                                        error = 0 ;
+                                        i = line + number ;
+                                    }
+                                }
+
+                                if (error != 0)
+                                {
+                                    for (int j = line ; j < (line + number) ; j++)
+                                    {
+                                        grid[j][colomn] = "\04" ;
+
+                                    }
                                     i = line + number ;
                                 }
                             }
-
-                            if (error != 0)
-                            {
-                                for (int j = line ; j < (line + number) ; j++)
-                                {
-                                    grid[j][colomn] = "\04" ;
-
-                                }
-                                i = line + number ;
-                            }
+                            while(i < line + number );
                         }
-                        while(i < line + number );
                     }
+                    break ;
                 }
-                break ;
             }
+            while(error != 1) ;
         }
-        while(error != 1) ;
         return error;
     }
 

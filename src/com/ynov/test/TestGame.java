@@ -73,5 +73,11 @@ public class TestGame {
         Assert.assertEquals(1, game.placeBoat(grid, 2));
     }
 
+    @Test
+    public void shouldReturnErrorWhenPlaceABoatMoreThan5Case(){
+        game.initGrids();
+        String[][] grid = game.getGrid();
+        Assert.assertEquals(0, game.placeBoat(grid, 12));
+    }
 
 }

@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cfb81aeb-646b-412f-8908-4e1b6903bac4" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/dictionaries/Maxime.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/battleship/com/ynov/main/Game.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/battleship/com/ynov/main/Game.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/battleship/com/ynov/test/TestGame.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/battleship/com/ynov/test/TestGame.class" afterDir="false" />
@@ -97,7 +97,7 @@
       <module name="battleship" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.ynov.test.*" />
+          <option name="PATTERN" value="com.ynov.main.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -112,7 +112,7 @@
       <module name="battleship" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.ynov.test.*" />
+          <option name="PATTERN" value="com.ynov.main.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -128,7 +128,7 @@
       <module name="battleship" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.ynov.test.*" />
+          <option name="PATTERN" value="com.ynov.main.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -187,22 +187,22 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="690" y="268" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1584003492643" />
-    <state width="1877" height="334" key="GridCell.Tab.0.bottom" timestamp="1584021807815">
+    <state width="1877" height="334" key="GridCell.Tab.0.bottom" timestamp="1584021963643">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="334" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1584021807815" />
-    <state width="1877" height="334" key="GridCell.Tab.0.center" timestamp="1584021807815">
+    <state width="1877" height="334" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1584021963643" />
+    <state width="1877" height="334" key="GridCell.Tab.0.center" timestamp="1584021963643">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="334" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1584021807815" />
-    <state width="1877" height="334" key="GridCell.Tab.0.left" timestamp="1584021807815">
+    <state width="1877" height="334" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1584021963643" />
+    <state width="1877" height="334" key="GridCell.Tab.0.left" timestamp="1584021963643">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="334" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1584021807815" />
-    <state width="1877" height="334" key="GridCell.Tab.0.right" timestamp="1584021807815">
+    <state width="1877" height="334" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1584021963643" />
+    <state width="1877" height="334" key="GridCell.Tab.0.right" timestamp="1584021963643">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="334" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1584021807815" />
+    <state width="1877" height="334" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1584021963643" />
     <state width="1877" height="348" key="GridCell.Tab.1.bottom" timestamp="1584009006673">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
