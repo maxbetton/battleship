@@ -8,12 +8,19 @@ public class Game {
     static String[][] hiddenGrid = new String[11][11];
     static String you = "";
 
-    public static void main(String [] args) throws IOException {
+    public Game(){
         initGrids();
 
         initIAGrid();
 
         initPlayerGrid();
+    }
+    public static void main(String [] args) {
+//        initGrids();
+//
+//        initIAGrid();
+//
+//        initPlayerGrid();
     }
 
 
@@ -154,15 +161,15 @@ public class Game {
 
     private static void placePlayerBoats(String[][] grid, String you) {
         //coordinates for the 5 boxes boat
-        placeBoat(gridIA, 5) ;
+        placeBoat(grid, 5) ;
         //coordinates for the 4 boxes boat
-        placeBoat(gridIA, 4) ;
+        placeBoat(grid, 4) ;
         //coordinates for the first 3 boxes boat
-        placeBoat(gridIA, 3) ;
+        placeBoat(grid, 3) ;
         //coordinates for the second 3 boxes boat
-        placeBoat(gridIA, 3) ;
+        placeBoat(grid, 3) ;
         //coordinates for the 2 boxes boat
-        placeBoat(gridIA, 2) ;
+        placeBoat(grid, 2) ;
 
     }
 
