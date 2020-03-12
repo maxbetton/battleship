@@ -51,4 +51,27 @@ public class TestGame {
         Assert.assertEquals(1, game.placeBoat(grid, 5));
     }
 
+
+    @Test
+    public void shouldPlaceA4CasePlayerBoat() {
+        game.initGrids();
+        String[][] grid = game.getGrid();
+        Assert.assertEquals(1, game.placeBoat(grid, 4));
+    }
+
+    @Test
+    public void shouldPlaceA3CasePlayerBoat() {
+        game.initGrids();
+        String[][] grid = game.getGrid();
+        Assert.assertEquals(1, game.placeBoat(grid, 3));
+    }
+
+    @Test
+    public void shouldPlaceA2CasePlayerBoat() {
+        game.initGrids();
+        String[][] grid = game.getGrid();
+        Assert.assertEquals(1, game.placeBoat(grid, 2));
+    }
+
+
 }
