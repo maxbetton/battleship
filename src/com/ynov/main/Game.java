@@ -387,6 +387,7 @@ public class Game {
         {
             hiddenGrid[line][column] = " " ;
             System.out.println("you sunk");
+            counter = counter + 1 ;
             return "you sunk";
         }
         else if (gridIA[line][column] == "\04")
@@ -394,9 +395,11 @@ public class Game {
             hiddenGrid[line][column] = "X" ;
             touchA = touchA + 1 ;
             System.out.println("you touch");
+            counter = counter + 1 ;
             return "you touch";
+
         }
-        counter = counter + 1 ;
+
         return "";
     }
 
@@ -442,7 +445,7 @@ public class Game {
                 erreur = true ;
             }
         }
-        while(erreur != false) ;
+        while(erreur != false);
 
         return a ;
     }
