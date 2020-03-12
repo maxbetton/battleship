@@ -38,6 +38,7 @@ public class Menu {
                 Game game = new Game();
                 return "choice 1";
             case 2:
+                Rules rules = new Rules();
                 return "choice 2";
             case 3:
                 return "quit game";
