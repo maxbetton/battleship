@@ -1,16 +1,19 @@
 package com.ynov.main;
 
+import java.io.IOException;
+
 public class Game {
     static String[][]  grid = new String[11][11];
     static String[][] gridIA = new String[11][11];
     static String[][] hiddenGrid = new String[11][11];
+    static String you = "";
 
-
-    public static void main(String [] args){
+    public static void main(String [] args) throws IOException {
         initGrids();
 
         initIAGrid();
 
+        initPlayerGrid();
     }
 
 
@@ -20,7 +23,7 @@ public class Game {
     }
 
     public static String initGrids() {
-        String you = "";
+
         String ia = "";
         int line = 0;
         int column = 0;
@@ -55,10 +58,21 @@ public class Game {
         return printTwoGrids(grid, hiddenGrid);
     }
 
+    public String[][] getGrid(){
+        return grid;
+    }
+
     public static String initIAGrid() {
         placeIABoats(gridIA);
         return firstPrint(gridIA);
     }
+
+
+    public static String initPlayerGrid() throws IOException {
+        placePlayerBoats(grid, you);
+        return firstPrint(grid);
+    }
+
 
     public static String printTwoGrids(String[][] a, String[][] b) {
         StringBuilder res = new StringBuilder();
@@ -126,19 +140,34 @@ public class Game {
 
     private static void placeIABoats(String[][] gridIA) {
         //coordinates for the 5 boxes boat
-        iaBoats(gridIA, 5) ;
+        placeBoat(gridIA, 5) ;
         //coordinates for the 4 boxes boat
-        iaBoats(gridIA, 4) ;
+        placeBoat(gridIA, 4) ;
         //coordinates for the first 3 boxes boat
-        iaBoats(gridIA, 3) ;
+        placeBoat(gridIA, 3) ;
         //coordinates for the second 3 boxes boat
-        iaBoats(gridIA, 3) ;
+        placeBoat(gridIA, 3) ;
         //coordinates for the 2 boxes boat
-        iaBoats(gridIA, 2) ;
+        placeBoat(gridIA, 2) ;
 
     }
 
-    public static void iaBoats(String[][] grid, int number)
+    private static void placePlayerBoats(String[][] grid, String you) throws IOException {
+        //coordinates for the 5 boxes boat
+        placeBoat(gridIA, 5) ;
+        //coordinates for the 4 boxes boat
+        placeBoat(gridIA, 4) ;
+        //coordinates for the first 3 boxes boat
+        placeBoat(gridIA, 3) ;
+        //coordinates for the second 3 boxes boat
+        placeBoat(gridIA, 3) ;
+        //coordinates for the 2 boxes boat
+        placeBoat(gridIA, 2) ;
+
+    }
+
+
+    public static void placeBoat(String[][] grid, int number)
     {
         int error;
 
@@ -229,7 +258,7 @@ public class Game {
         while(error != 1) ;
     }
 
-    public static String firstPrint(String[][] a) // Affiche la grille quand vosu placez les bateaux
+    public static String firstPrint(String[][] a) // Affiche la grille quand vous placez les bateaux
     {
         StringBuilder res = new StringBuilder();
         for (int i = 0 ; i < 11 ; i++)
@@ -265,4 +294,5 @@ public class Game {
         System.out.println() ;
         return res.toString();
     }
+
 }

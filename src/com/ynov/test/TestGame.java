@@ -4,6 +4,7 @@ import com.ynov.main.Game;
 import org.junit.Assert;
 import org.junit.Test;
 
+import java.io.IOException;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -39,7 +40,13 @@ public class TestGame {
                 "8  .*\n" +
                 "9  .*\n" +
                 "10 .*\n");
-        Matcher m =p.matcher(game.initIAGrid());
+        Matcher m = p.matcher(game.initIAGrid());
         Assert.assertTrue(m.matches());
     }
+
+    @Test
+    public void shouldPlaceA5CasePlayerBoat() throws IOException {
+
+    }
+
 }
