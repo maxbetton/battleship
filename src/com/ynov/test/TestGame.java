@@ -80,4 +80,11 @@ public class TestGame {
         Assert.assertEquals(0, game.placeBoat(grid, 12));
     }
 
+    @Test
+    public void shouldReturnErrorWhenPlaceABoaLessThan0Case(){
+        game.initGrids();
+        String[][] grid = game.getGrid();
+        Assert.assertEquals(0, game.placeBoat(grid, -1));
+    }
+
 }

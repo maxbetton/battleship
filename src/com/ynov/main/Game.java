@@ -171,7 +171,7 @@ public class Game {
     {
         int error;
 
-        if (number > 5)
+        if (number > 5 || number < 0)
             error = 0;
         else {
 
