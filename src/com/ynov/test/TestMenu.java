@@ -16,4 +16,9 @@ public class TestMenu {
     public void shouldMenuChoice2CorrectlyDisplayed() {
         Assert.assertEquals("choice 2", menu.menuChoiceSelected(2));
     }
+
+    @Test
+    public void shouldMenuChoice3CorrectlyDisplayed() {
+        Assert.assertEquals("quit game", menu.menuChoiceSelected(3));
+    }
 }

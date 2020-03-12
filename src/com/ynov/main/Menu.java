@@ -38,6 +38,8 @@ public class Menu {
                 return "choice 1";
             case 2:
                 return "choice 2";
+            case 3:
+                return "quit game";
             default:
                 return "";
         }
