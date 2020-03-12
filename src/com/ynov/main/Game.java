@@ -68,9 +68,9 @@ public class Game {
     }
 
 
-    public static String initPlayerGrid() throws IOException {
+    public static void initPlayerGrid() {
         placePlayerBoats(grid, you);
-        return firstPrint(grid);
+        firstPrint(grid);
     }
 
 
@@ -152,7 +152,7 @@ public class Game {
 
     }
 
-    private static void placePlayerBoats(String[][] grid, String you) throws IOException {
+    private static void placePlayerBoats(String[][] grid, String you) {
         //coordinates for the 5 boxes boat
         placeBoat(gridIA, 5) ;
         //coordinates for the 4 boxes boat
@@ -201,10 +201,10 @@ public class Game {
 
                                 for (int j = colomn ; j < (colomn + number) ; j++)
                                 {
-                                    if(grid[line][j].equals("\04"))
-                                    {
-                                        error = 0 ;
-                                        i = colomn + number ;
+                                    if (grid[line][j].equals("\04")) {
+                                        error = 0;
+                                        i = colomn + number;
+                                        break;
                                     }
                                 }
 
@@ -237,10 +237,10 @@ public class Game {
 
                                 for (int j = line ; j < (line + number) ; j++)
                                 {
-                                    if(grid[j][colomn].equals("\04"))
-                                    {
-                                        error = 0 ;
-                                        i = line + number ;
+                                    if (grid[j][colomn].equals("\04")) {
+                                        error = 0;
+                                        i = line + number;
+                                        break;
                                     }
                                 }
 
@@ -282,7 +282,7 @@ public class Game {
                     System.out.print(a[i][j] + " ") ;
                     res.append(a[i][j]).append(" ");
                 }
-                else if(j == 0 && i > 0)
+                else if(j == 0)
                 {
                     System.out.print(a[i][j] + "  ") ;
                     res.append(a[i][j]).append("  ");
