@@ -370,7 +370,7 @@ public class Game {
     }
 
         public static String playerWinOrLoose(int touch) {
-        return "";
+        return "you win";
     }
 
 
