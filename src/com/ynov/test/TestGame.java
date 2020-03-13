@@ -137,4 +137,9 @@ public class TestGame {
     public void shouldReturnPlayerWin() {
         Assert.assertEquals("you win", Game.playerWinOrLoose(17));
     }
+
+    @Test
+    public void shouldReturnPlayerLoose() {
+        Assert.assertEquals("you win", Game.playerWinOrLoose(16));
+    }
 }
