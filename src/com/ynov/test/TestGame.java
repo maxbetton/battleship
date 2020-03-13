@@ -132,4 +132,9 @@ public class TestGame {
         Game.firstPrint(myGrid);
         Assert.assertEquals("you sunk", Game.touchOrSunkPlayer(myGrid, hiddenGrid, 0, 0));
     }
+
+    @Test
+    public void shouldReturnPlayerWin() {
+        Assert.assertEquals("you win", Game.playerWinOrLoose(17));
+    }
 }

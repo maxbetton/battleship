@@ -365,19 +365,12 @@ public class Game {
             }
         }
         while(touch != 17 && touchA != 17) ;
+        playerWinOrLoose(touch);
 
-        //Vous dis si vous avez perdu ou gagner
-        if (touchA == 17)
-        {
-            printTwoGrids(grid, hiddenGrid) ;
-            System.out.println("\n" + you + " : you loose\n") ;
-        }
-        else
-        {
-            printTwoGrids(grid, hiddenGrid) ;
-            System.out.println("\n" + you + " : you win\n") ;
-        }
+    }
 
+        public static String playerWinOrLoose(int touch) {
+        return "";
     }
 
 
