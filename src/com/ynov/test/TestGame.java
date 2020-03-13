@@ -140,6 +140,6 @@ public class TestGame {
 
     @Test
     public void shouldReturnPlayerLoose() {
-        Assert.assertEquals("you win", Game.playerWinOrLoose(16));
+        Assert.assertEquals("you loose", Game.playerWinOrLoose(16));
     }
 }
