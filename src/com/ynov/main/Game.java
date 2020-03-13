@@ -13,8 +13,8 @@ public class Game {
     static int column = 0;
     static int coordinate = 0;
     static int counter = 1;
-    static int touch = 0;
-    static int touchA = 0;
+    static int touchIA = 0;
+    static int touchYou = 0;
 
     public Game() throws IOException {
         initGrids();
@@ -364,16 +364,20 @@ public class Game {
 
             }
         }
-        while(touch != 17 && touchA != 17) ;
-        playerWinOrLoose(touch);
+        while(touchIA != 17 && touchYou != 17) ;
+        playerWinOrLoose(touchIA);
 
     }
 
-        public static String playerWinOrLoose(int touch) {
-        if (touch == 17)
+    public static String playerWinOrLoose(int touchYou) {
+        if (touchYou == 17) {
+            System.out.println("\n" + you + " : you win\n") ;
             return "you win";
-        else
+        }
+        else {
+            System.out.println("\n" + you + " : you loose\n");
             return "you loose";
+        }
     }
 
 
@@ -389,7 +393,7 @@ public class Game {
         else if (gridIA[line][column] == "\04")
         {
             hiddenGrid[line][column] = "X" ;
-            touchA = touchA + 1 ;
+            touchYou = touchYou + 1 ;
             System.out.println("you touch");
             counter = counter + 1 ;
             return "you touch";
@@ -409,7 +413,7 @@ public class Game {
         else if (grid[line][column] == "\04")
         {
             grid[line][column] = "X" ;
-            touch = touch + 1 ;
+            touchIA = touchIA + 1 ;
             System.out.println("IA touch");
         }
         counter = counter + 1 ;
