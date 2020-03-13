@@ -370,7 +370,9 @@ public class Game {
     }
 
         public static String playerWinOrLoose(int touch) {
-        return "you win";
+        if (touch == 17)
+            return "you win";
+        return "";
     }
 
 
